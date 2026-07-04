@@ -1,0 +1,20 @@
+<div class="b2c-dropdown" [class.b2c-dropdown--open]="isOpen">
+  <label class="b2c-dropdown__label" *ngIf="label">{{ label }}</label>
+  <button class="b2c-dropdown__trigger" (click)="toggleOpen()" [attr.aria-expanded]="isOpen">
+    <span>{{ selectedLabel || placeholder }}</span>
+    <ion-icon name="chevron-down-outline"></ion-icon>
+  </button>
+  <ul class="b2c-dropdown__menu" *ngIf="isOpen" role="listbox">
+    <li
+      *ngFor="let opt of options"
+      class="b2c-dropdown__option"
+      [class.b2c-dropdown__option--selected]="opt.value === value"
+      (click)="select(opt)"
+      role="option"
+      [attr.aria-selected]="opt.value === value"
+    >
+      {{ opt.label }}
+    </li>
+  </ul>
+  <p class="b2c-dropdown__error" *ngIf="errorMessage">{{ errorMessage }}</p>
+</div>

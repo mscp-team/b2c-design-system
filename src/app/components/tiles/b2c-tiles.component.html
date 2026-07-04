@@ -1,0 +1,15 @@
+<div class="b2c-tiles" [style.--cols]="columns">
+  <div
+    *ngFor="let tile of tiles"
+    class="b2c-tile"
+    [class.b2c-tile--selected]="tile.id === selectedId"
+    [class.b2c-tile--disabled]="tile.disabled"
+    (click)="!tile.disabled && select(tile.id)"
+    role="button"
+    [attr.aria-pressed]="tile.id === selectedId"
+  >
+    <ion-icon *ngIf="tile.icon" [name]="tile.icon" class="b2c-tile__icon"></ion-icon>
+    <span class="b2c-tile__label">{{ tile.label }}</span>
+    <span class="b2c-tile__desc" *ngIf="tile.description">{{ tile.description }}</span>
+  </div>
+</div>

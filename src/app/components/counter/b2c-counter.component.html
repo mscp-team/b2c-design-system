@@ -1,0 +1,9 @@
+<div class="b2c-counter">
+  <button class="b2c-counter__btn" (click)="decrement()" [disabled]="value <= min" aria-label="Diminuir">
+    <ion-icon name="remove-outline"></ion-icon>
+  </button>
+  <span class="b2c-counter__value">{{ value }}</span>
+  <button class="b2c-counter__btn" (click)="increment()" [disabled]="value >= max" aria-label="Aumentar">
+    <ion-icon name="add-outline"></ion-icon>
+  </button>
+</div>

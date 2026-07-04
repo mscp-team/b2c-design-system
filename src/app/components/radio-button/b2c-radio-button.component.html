@@ -1,0 +1,23 @@
+<div class="b2c-radio-group">
+  <label class="b2c-radio-group__label" *ngIf="groupLabel">{{ groupLabel }}</label>
+  <div class="b2c-radio-group__options" [class.b2c-radio-group__options--horizontal]="horizontal">
+    <label
+      *ngFor="let opt of options"
+      class="b2c-radio"
+      [class.b2c-radio--checked]="opt.value === value"
+      [class.b2c-radio--disabled]="opt.disabled"
+    >
+      <input
+        type="radio"
+        class="b2c-radio__input"
+        [name]="name"
+        [value]="opt.value"
+        [checked]="opt.value === value"
+        [disabled]="opt.disabled"
+        (change)="select(opt.value)"
+      />
+      <span class="b2c-radio__dot"></span>
+      <span class="b2c-radio__text">{{ opt.label }}</span>
+    </label>
+  </div>
+</div>

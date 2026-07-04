@@ -1,0 +1,17 @@
+<div class="b2c-stepper">
+  <div
+    *ngFor="let step of steps; let i = index; let last = last"
+    class="b2c-stepper__step"
+    [class.b2c-stepper__step--completed]="i < currentStep"
+    [class.b2c-stepper__step--active]="i === currentStep"
+  >
+    <div class="b2c-stepper__indicator">
+      <span class="b2c-stepper__circle">
+        <ion-icon *ngIf="i < currentStep" name="checkmark-outline"></ion-icon>
+        <span *ngIf="i >= currentStep">{{ i + 1 }}</span>
+      </span>
+      <div class="b2c-stepper__line" *ngIf="!last"></div>
+    </div>
+    <span class="b2c-stepper__label">{{ step }}</span>
+  </div>
+</div>

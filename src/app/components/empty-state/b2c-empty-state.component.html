@@ -1,0 +1,6 @@
+<div class="b2c-empty-state">
+  <ion-icon [name]="icon" class="b2c-empty-state__icon"></ion-icon>
+  <h3 class="b2c-empty-state__title">{{ title }}</h3>
+  <p class="b2c-empty-state__desc" *ngIf="description">{{ description }}</p>
+  <ng-content></ng-content>
+</div>

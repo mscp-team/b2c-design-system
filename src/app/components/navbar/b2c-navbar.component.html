@@ -1,0 +1,20 @@
+<header class="b2c-navbar">
+  <div class="b2c-navbar__brand">
+    <img *ngIf="logoUrl" [src]="logoUrl" [alt]="logoAlt" class="b2c-navbar__logo" />
+    <span *ngIf="!logoUrl" class="b2c-navbar__brand-name">{{ brandName }}</span>
+  </div>
+  <nav class="b2c-navbar__nav" *ngIf="!compact">
+    <a
+      *ngFor="let item of navItems"
+      [href]="item.url"
+      class="b2c-navbar__link"
+      [class.b2c-navbar__link--active]="item.active"
+    >{{ item.label }}</a>
+  </nav>
+  <div class="b2c-navbar__actions">
+    <ng-content></ng-content>
+    <button class="b2c-navbar__hamburger" *ngIf="compact" (click)="menuToggle.emit()" aria-label="Menu">
+      <ion-icon name="menu-outline"></ion-icon>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,28 @@
+.b2c-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 64px;
+  background: var(--b2c-color-surface);
+  border-bottom: 1px solid var(--b2c-color-border);
+  font-family: var(--b2c-font-family);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  &__logo { height: 36px; display: block; }
+  &__brand-name { font-size: 20px; font-weight: 700; color: var(--b2c-color-primary); }
+
+  &__nav { display: flex; align-items: center; gap: 8px; }
+  &__link {
+    padding: 6px 12px; border-radius: 6px;
+    font-size: 15px; font-weight: 500; color: var(--b2c-color-text-secondary);
+    text-decoration: none; transition: color 0.15s, background 0.15s;
+    &:hover { color: var(--b2c-color-text); background: var(--b2c-color-surface-secondary); }
+    &--active { color: var(--b2c-color-primary); font-weight: 700; }
+  }
+
+  &__actions { display: flex; align-items: center; gap: 12px; }
+  &__hamburger { background: none; border: none; font-size: 24px; cursor: pointer; color: var(--b2c-color-text); }
+}

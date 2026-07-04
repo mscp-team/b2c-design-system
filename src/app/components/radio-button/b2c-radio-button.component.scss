@@ -1,0 +1,30 @@
+.b2c-radio-group {
+  font-family: var(--b2c-font-family);
+  &__label { display: block; font-size: 14px; font-weight: 600; color: var(--b2c-color-text); margin-bottom: 8px; }
+  &__options { display: flex; flex-direction: column; gap: 8px;
+    &--horizontal { flex-direction: row; flex-wrap: wrap; gap: 16px; }
+  }
+}
+
+.b2c-radio {
+  display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none;
+  font-size: 15px; color: var(--b2c-color-text);
+
+  &__input { position: absolute; opacity: 0; width: 0; height: 0; }
+
+  &__dot {
+    width: 20px; height: 20px; border-radius: 50%;
+    border: 2px solid var(--b2c-color-border);
+    background: var(--b2c-color-surface);
+    flex-shrink: 0; transition: border-color 0.15s;
+    display: flex; align-items: center; justify-content: center;
+    &::after { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--b2c-color-primary); opacity: 0; transition: opacity 0.15s; }
+  }
+
+  &--checked .b2c-radio__dot {
+    border-color: var(--b2c-color-primary);
+    &::after { opacity: 1; }
+  }
+
+  &--disabled { opacity: 0.5; cursor: not-allowed; }
+}

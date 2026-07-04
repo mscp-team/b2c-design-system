@@ -1,0 +1,4 @@
+<div class="b2c-loading" [class.b2c-loading--overlay]="overlay" *ngIf="visible">
+  <ion-spinner [name]="spinner" class="b2c-loading__spinner"></ion-spinner>
+  <p class="b2c-loading__msg" *ngIf="message">{{ message }}</p>
+</div>

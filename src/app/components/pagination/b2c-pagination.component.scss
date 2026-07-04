@@ -1,0 +1,26 @@
+.b2c-pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--b2c-font-family);
+
+  &__btn, &__page {
+    display: flex; align-items: center; justify-content: center;
+    min-width: 36px; height: 36px;
+    border-radius: 6px; border: 1px solid var(--b2c-color-border);
+    background: var(--b2c-color-surface); cursor: pointer;
+    font-size: 14px; color: var(--b2c-color-text);
+    transition: background 0.15s;
+    &:hover:not([disabled]) { background: var(--b2c-color-surface-secondary); }
+    &[disabled] { opacity: 0.45; cursor: not-allowed; }
+  }
+
+  &__page--active {
+    background: var(--b2c-color-primary) !important;
+    color: #fff !important;
+    border-color: var(--b2c-color-primary);
+    font-weight: 700;
+  }
+
+  &__page--ellipsis { border-color: transparent; background: transparent; cursor: default; }
+}

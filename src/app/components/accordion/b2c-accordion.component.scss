@@ -1,0 +1,42 @@
+.b2c-accordion {
+  border: 1px solid var(--b2c-color-border);
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px;
+    background: var(--b2c-color-surface);
+    border: none;
+    cursor: pointer;
+    font-family: var(--b2c-font-family);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--b2c-color-text);
+    text-align: left;
+
+    &:focus-visible {
+      outline: 2px solid var(--b2c-color-focus-ring);
+      outline-offset: -2px;
+    }
+  }
+
+  &__icon {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  &--open .b2c-accordion__icon {
+    transform: rotate(180deg);
+  }
+
+  &__body {
+    padding: 0 16px 16px;
+    font-family: var(--b2c-font-family);
+    font-size: 14px;
+    color: var(--b2c-color-text-secondary);
+  }
+}

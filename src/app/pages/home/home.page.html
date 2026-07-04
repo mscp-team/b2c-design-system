@@ -1,0 +1,138 @@
+<ion-app>
+  <b2c-navbar
+    brandName="B2C Design System"
+    [navItems]="navItems"
+  ></b2c-navbar>
+
+  <ion-content class="ion-padding">
+    <h1>B2C Component Gallery</h1>
+
+    <!-- Alert -->
+    <section>
+      <h2>Alert</h2>
+      <b2c-alert type="success" title="Sucesso" message="Operação concluída com sucesso."></b2c-alert>
+      <b2c-alert type="error"   message="Ocorreu um erro inesperado." [dismissible]="true"></b2c-alert>
+    </section>
+
+    <!-- Avatar -->
+    <section>
+      <h2>Avatar</h2>
+      <b2c-avatar name="João Silva" size="md"></b2c-avatar>
+      <b2c-avatar name="Ana Costa" size="lg"></b2c-avatar>
+    </section>
+
+    <!-- Badge / Status -->
+    <section>
+      <h2>Status Indicator</h2>
+      <b2c-status-indicator status="active"   label="Ativo"   [pill]="true"></b2c-status-indicator>
+      <b2c-status-indicator status="pending"  label="Pendente" [pill]="true"></b2c-status-indicator>
+      <b2c-status-indicator status="inactive" label="Inativo" [pill]="true"></b2c-status-indicator>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section>
+      <h2>Breadcrumb</h2>
+      <b2c-breadcrumb [items]="breadcrumbs"></b2c-breadcrumb>
+    </section>
+
+    <!-- Card -->
+    <section>
+      <h2>Card</h2>
+      <b2c-card title="Título do Card" subtitle="Subtítulo com descrição" label="Destaque" variant="elevated" [clickable]="true"></b2c-card>
+    </section>
+
+    <!-- Counter -->
+    <section>
+      <h2>Counter</h2>
+      <b2c-counter [value]="counterVal" (valueChange)="counterVal = $event"></b2c-counter>
+    </section>
+
+    <!-- Progress Bar -->
+    <section>
+      <h2>Progress Bar</h2>
+      <b2c-progress-bar [value]="72" [showLabel]="true"></b2c-progress-bar>
+      <b2c-progress-bar [indeterminate]="true"></b2c-progress-bar>
+    </section>
+
+    <!-- Stepper -->
+    <section>
+      <h2>Stepper</h2>
+      <b2c-stepper [steps]="steps" [currentStep]="1"></b2c-stepper>
+    </section>
+
+    <!-- Tab List -->
+    <section>
+      <h2>Tab List</h2>
+      <b2c-tab-list [tabs]="tabs" [activeTab]="activeTab" (tabChange)="activeTab = $event"></b2c-tab-list>
+    </section>
+
+    <!-- Tiles -->
+    <section>
+      <h2>Tiles</h2>
+      <b2c-tiles [tiles]="tileItems" [selectedId]="selectedTile" (selectionChange)="selectedTile = $event"></b2c-tiles>
+    </section>
+
+    <!-- Pagination -->
+    <section>
+      <h2>Pagination</h2>
+      <b2c-pagination [currentPage]="page" [totalPages]="10" (pageChange)="page = $event"></b2c-pagination>
+    </section>
+
+    <!-- Accordion -->
+    <section>
+      <h2>Accordion</h2>
+      <b2c-accordion title="O que é o B2C Design System?">Conjunto de componentes reutilizáveis para o produto B2C.</b2c-accordion>
+    </section>
+
+    <!-- Dropdown -->
+    <section>
+      <h2>Dropdown</h2>
+      <b2c-dropdown [options]="ddOptions" [(value)]="ddValue" label="Estado"></b2c-dropdown>
+    </section>
+
+    <!-- Loading -->
+    <section>
+      <h2>Loading</h2>
+      <b2c-loading [visible]="true" message="Carregando..."></b2c-loading>
+    </section>
+
+    <!-- Divider -->
+    <section>
+      <h2>Divider</h2>
+      <b2c-divider label="ou"></b2c-divider>
+    </section>
+
+    <!-- Tooltip -->
+    <section>
+      <h2>Tooltip</h2>
+      <b2c-tooltip text="Informação útil" position="top">
+        <button>Passe o mouse</button>
+      </b2c-tooltip>
+    </section>
+
+    <!-- Toast -->
+    <section>
+      <h2>Toast</h2>
+      <b2c-toast type="success" message="Salvo com sucesso!" [duration]="0"></b2c-toast>
+    </section>
+
+    <!-- Radio Button -->
+    <section>
+      <h2>Radio Button</h2>
+      <b2c-radio-button
+        groupLabel="Escolha uma opção"
+        [options]="radioOpts"
+        [(value)]="radioVal"
+      ></b2c-radio-button>
+    </section>
+
+    <!-- Empty State -->
+    <section>
+      <h2>Empty State</h2>
+      <b2c-empty-state title="Sem resultados" description="Tente outra busca."></b2c-empty-state>
+    </section>
+
+  </ion-content>
+
+  <b2c-footer [columns]="footerCols"></b2c-footer>
+</ion-app>

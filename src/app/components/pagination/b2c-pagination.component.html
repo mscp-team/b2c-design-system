@@ -1,0 +1,20 @@
+<nav class="b2c-pagination" aria-label="Paginação">
+  <button class="b2c-pagination__btn" (click)="prev()" [disabled]="currentPage <= 1" aria-label="Anterior">
+    <ion-icon name="chevron-back-outline"></ion-icon>
+  </button>
+
+  <button
+    *ngFor="let p of pages"
+    class="b2c-pagination__page"
+    [class.b2c-pagination__page--active]="p === currentPage"
+    [class.b2c-pagination__page--ellipsis]="p === -1"
+    [disabled]="p === -1"
+    (click)="goTo(p)"
+  >
+    {{ p === -1 ? '…' : p }}
+  </button>
+
+  <button class="b2c-pagination__btn" (click)="next()" [disabled]="currentPage >= totalPages" aria-label="Próximo">
+    <ion-icon name="chevron-forward-outline"></ion-icon>
+  </button>
+</nav>

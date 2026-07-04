@@ -1,0 +1,10 @@
+<div class="b2c-alert b2c-alert--{{ type }}" role="alert" *ngIf="visible">
+  <ion-icon [name]="iconName" class="b2c-alert__icon"></ion-icon>
+  <div class="b2c-alert__content">
+    <p class="b2c-alert__title" *ngIf="title">{{ title }}</p>
+    <p class="b2c-alert__message">{{ message }}</p>
+  </div>
+  <button class="b2c-alert__close" *ngIf="dismissible" (click)="dismiss()" aria-label="Fechar">
+    <ion-icon name="close-outline"></ion-icon>
+  </button>
+</div>

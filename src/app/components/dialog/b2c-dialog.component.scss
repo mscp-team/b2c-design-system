@@ -1,0 +1,23 @@
+.b2c-dialog {
+  --border-radius: 16px;
+  --width: min(480px, 92vw);
+
+  &__header ion-toolbar {
+    --background: var(--b2c-color-surface);
+    --color: var(--b2c-color-text);
+    font-family: var(--b2c-font-family);
+    font-weight: 700;
+  }
+
+  &__body {
+    --background: var(--b2c-color-surface);
+    font-family: var(--b2c-font-family);
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: var(--b2c-color-surface);
+  }
+}

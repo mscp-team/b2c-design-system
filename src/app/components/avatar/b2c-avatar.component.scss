@@ -1,0 +1,19 @@
+.b2c-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  font-family: var(--b2c-font-family);
+  font-weight: 600;
+  color: #fff;
+  background: var(--b2c-color-primary);
+
+  &--sm  { width: 32px;  height: 32px;  font-size: 12px; }
+  &--md  { width: 40px;  height: 40px;  font-size: 14px; }
+  &--lg  { width: 56px;  height: 56px;  font-size: 18px; }
+  &--xl  { width: 80px;  height: 80px;  font-size: 24px; }
+
+  &__img { width: 100%; height: 100%; object-fit: cover; }
+  &__initials { line-height: 1; }
+}

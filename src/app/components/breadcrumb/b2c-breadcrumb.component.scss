@@ -1,0 +1,9 @@
+.b2c-breadcrumb {
+  &__list { display: flex; align-items: center; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; gap: 4px; }
+  &__item { display: flex; align-items: center; gap: 4px; font-family: var(--b2c-font-family); font-size: 14px; }
+  &__link { color: var(--b2c-color-primary); text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+  &__current { color: var(--b2c-color-text-secondary); }
+  &__sep { font-size: 12px; color: var(--b2c-color-text-disabled); }
+}

@@ -1,0 +1,6 @@
+<div class="b2c-tooltip-wrapper" (mouseenter)="show = true" (mouseleave)="show = false">
+  <ng-content></ng-content>
+  <div class="b2c-tooltip b2c-tooltip--{{ position }}" *ngIf="show" role="tooltip">
+    {{ text }}
+  </div>
+</div>

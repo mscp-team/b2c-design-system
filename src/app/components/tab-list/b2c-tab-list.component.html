@@ -1,0 +1,14 @@
+<div class="b2c-tab-list" role="tablist">
+  <button
+    *ngFor="let tab of tabs"
+    class="b2c-tab-list__tab"
+    [class.b2c-tab-list__tab--active]="tab.id === activeTab"
+    [disabled]="tab.disabled"
+    role="tab"
+    [attr.aria-selected]="tab.id === activeTab"
+    (click)="selectTab(tab.id)"
+  >
+    <ion-icon *ngIf="tab.icon" [name]="tab.icon" class="b2c-tab-list__icon"></ion-icon>
+    {{ tab.label }}
+  </button>
+</div>

@@ -1,0 +1,4 @@
+<div class="b2c-avatar b2c-avatar--{{ size }}" [style.background-color]="bgColor">
+  <img *ngIf="src" [src]="src" [alt]="alt" class="b2c-avatar__img" />
+  <span *ngIf="!src" class="b2c-avatar__initials">{{ initials }}</span>
+</div>

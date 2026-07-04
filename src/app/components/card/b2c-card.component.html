@@ -1,0 +1,11 @@
+<div class="b2c-card b2c-card--{{ variant }}" [class.b2c-card--clickable]="clickable" (click)="clickable && cardClick.emit()">
+  <div class="b2c-card__media" *ngIf="imageUrl">
+    <img [src]="imageUrl" [alt]="imageAlt" class="b2c-card__img" />
+  </div>
+  <div class="b2c-card__body">
+    <p class="b2c-card__label" *ngIf="label">{{ label }}</p>
+    <h3 class="b2c-card__title" *ngIf="title">{{ title }}</h3>
+    <p class="b2c-card__subtitle" *ngIf="subtitle">{{ subtitle }}</p>
+    <ng-content></ng-content>
+  </div>
+</div>

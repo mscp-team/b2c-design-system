@@ -1,0 +1,23 @@
+.b2c-tooltip-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.b2c-tooltip {
+  position: absolute;
+  z-index: 200;
+  background: var(--b2c-color-text);
+  color: #fff;
+  font-family: var(--b2c-font-family);
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+
+  &--top    { bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); }
+  &--bottom { top:    calc(100% + 8px); left: 50%; transform: translateX(-50%); }
+  &--left   { right:  calc(100% + 8px); top:  50%; transform: translateY(-50%); }
+  &--right  { left:   calc(100% + 8px); top:  50%; transform: translateY(-50%); }
+}

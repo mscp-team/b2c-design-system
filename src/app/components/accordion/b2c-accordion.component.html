@@ -1,0 +1,9 @@
+<div class="b2c-accordion" [class.b2c-accordion--open]="open">
+  <button class="b2c-accordion__header" (click)="toggle()" [attr.aria-expanded]="open">
+    <span class="b2c-accordion__title">{{ title }}</span>
+    <ion-icon name="chevron-down-outline" class="b2c-accordion__icon"></ion-icon>
+  </button>
+  <div class="b2c-accordion__body" [hidden]="!open">
+    <ng-content></ng-content>
+  </div>
+</div>

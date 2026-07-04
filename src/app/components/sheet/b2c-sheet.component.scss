@@ -1,0 +1,18 @@
+.b2c-sheet {
+  --border-radius: 20px 20px 0 0;
+
+  &__handle {
+    width: 40px; height: 4px;
+    background: var(--b2c-color-border);
+    border-radius: 2px;
+    margin: 0 auto 16px;
+  }
+
+  &__title {
+    font-family: var(--b2c-font-family);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--b2c-color-text);
+    margin: 0 0 16px;
+  }
+}

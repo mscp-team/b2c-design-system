@@ -1,0 +1,33 @@
+.b2c-progress-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--b2c-font-family);
+
+  &__track {
+    flex: 1;
+    height: 8px;
+    background: var(--b2c-color-surface-secondary);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  &__fill {
+    height: 100%;
+    background: var(--b2c-color-primary);
+    border-radius: 999px;
+    transition: width 0.3s ease;
+
+    &--indeterminate {
+      width: 40% !important;
+      animation: b2c-progress-slide 1.2s infinite linear;
+    }
+  }
+
+  &__label { font-size: 13px; font-weight: 600; color: var(--b2c-color-text-secondary); white-space: nowrap; }
+}
+
+@keyframes b2c-progress-slide {
+  from { transform: translateX(-200%); }
+  to   { transform: translateX(350%); }
+}

@@ -1,0 +1,18 @@
+.b2c-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+
+  &--overlay {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(0,0,0,.45);
+  }
+
+  &__spinner { --color: var(--b2c-color-primary); width: 40px; height: 40px; }
+  &__msg { font-family: var(--b2c-font-family); font-size: 14px; color: var(--b2c-color-text-secondary); margin: 0; }
+
+  .b2c-loading--overlay &__msg { color: #fff; }
+}

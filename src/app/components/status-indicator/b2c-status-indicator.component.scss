@@ -1,0 +1,27 @@
+.b2c-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--b2c-font-family);
+  font-size: 13px;
+  font-weight: 600;
+
+  &__dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: currentColor; flex-shrink: 0;
+  }
+
+  &--active  { color: var(--b2c-color-success); }
+  &--inactive { color: var(--b2c-color-text-disabled); }
+  &--pending { color: var(--b2c-color-warning); }
+  &--error   { color: var(--b2c-color-error); }
+
+  &--pill {
+    padding: 2px 10px;
+    border-radius: 999px;
+    &.b2c-status--active  { background: rgba(0,132,61,.10); }
+    &.b2c-status--inactive { background: rgba(172,172,172,.15); }
+    &.b2c-status--pending { background: rgba(230,81,0,.10); }
+    &.b2c-status--error   { background: rgba(192,57,43,.10); }
+  }
+}

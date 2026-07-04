@@ -1,0 +1,10 @@
+<nav class="b2c-breadcrumb" aria-label="Breadcrumb">
+  <ol class="b2c-breadcrumb__list">
+    <li class="b2c-breadcrumb__item" *ngFor="let item of items; let last = last">
+      <a *ngIf="!last && item.url" [href]="item.url" class="b2c-breadcrumb__link">{{ item.label }}</a>
+      <span *ngIf="!last && !item.url" class="b2c-breadcrumb__link">{{ item.label }}</span>
+      <span *ngIf="last" class="b2c-breadcrumb__current" aria-current="page">{{ item.label }}</span>
+      <ion-icon *ngIf="!last" name="chevron-forward-outline" class="b2c-breadcrumb__sep"></ion-icon>
+    </li>
+  </ol>
+</nav>

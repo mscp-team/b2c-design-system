@@ -1,0 +1,16 @@
+<footer class="b2c-footer">
+  <div class="b2c-footer__top" *ngIf="columns.length">
+    <div class="b2c-footer__col" *ngFor="let col of columns">
+      <h4 class="b2c-footer__col-title">{{ col.title }}</h4>
+      <ul class="b2c-footer__links">
+        <li *ngFor="let link of col.links">
+          <a [href]="link.url" class="b2c-footer__link">{{ link.label }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="b2c-footer__bottom">
+    <span class="b2c-footer__copy">{{ copyright }}</span>
+    <ng-content></ng-content>
+  </div>
+</footer>

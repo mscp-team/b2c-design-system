@@ -1,0 +1,7 @@
+<div class="b2c-toast b2c-toast--{{ type }}" *ngIf="visible" role="alert" aria-live="assertive">
+  <ion-icon [name]="iconName" class="b2c-toast__icon"></ion-icon>
+  <span class="b2c-toast__msg">{{ message }}</span>
+  <button class="b2c-toast__close" (click)="dismiss()" aria-label="Fechar">
+    <ion-icon name="close-outline"></ion-icon>
+  </button>
+</div>

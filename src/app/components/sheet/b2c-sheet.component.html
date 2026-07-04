@@ -1,0 +1,15 @@
+<ion-modal
+  [isOpen]="isOpen"
+  [breakpoints]="breakpoints"
+  [initialBreakpoint]="initialBreakpoint"
+  (didDismiss)="closed.emit(); isOpen = false"
+  class="b2c-sheet"
+>
+  <ng-template>
+    <ion-content class="ion-padding">
+      <div class="b2c-sheet__handle"></div>
+      <h2 class="b2c-sheet__title" *ngIf="title">{{ title }}</h2>
+      <ng-content></ng-content>
+    </ion-content>
+  </ng-template>
+</ion-modal>

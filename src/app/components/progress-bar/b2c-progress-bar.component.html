@@ -1,0 +1,14 @@
+<div class="b2c-progress-bar">
+  <div class="b2c-progress-bar__track">
+    <div
+      class="b2c-progress-bar__fill"
+      [style.width.%]="clampedValue"
+      [class.b2c-progress-bar__fill--indeterminate]="indeterminate"
+      role="progressbar"
+      [attr.aria-valuenow]="clampedValue"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    ></div>
+  </div>
+  <span class="b2c-progress-bar__label" *ngIf="showLabel">{{ clampedValue }}%</span>
+</div>

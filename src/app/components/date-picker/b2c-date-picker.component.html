@@ -1,0 +1,12 @@
+<div class="b2c-date-picker">
+  <label class="b2c-date-picker__label" *ngIf="label">{{ label }}</label>
+  <ion-datetime
+    [presentation]="presentation"
+    [min]="min"
+    [max]="max"
+    [value]="value"
+    (ionChange)="onDateChange($event)"
+    class="b2c-date-picker__ctrl"
+  ></ion-datetime>
+  <p class="b2c-date-picker__error" *ngIf="errorMessage">{{ errorMessage }}</p>
+</div>
