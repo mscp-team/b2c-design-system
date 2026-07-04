@@ -1,0 +1,7 @@
+{
+  "name": "b2c-design-system",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
